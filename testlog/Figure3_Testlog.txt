@@ -1,0 +1,916 @@
+$ time python3.7 edge2cloud.py GCE put bigfiles gzip 0 0 4 4 10 10
+PARAMETERS:  bigfiles gzip
+##### gzip, compression ratio, 8.260158763323982
+##### Compression time, 1.9495418071746826, seconds
+##### gzip, compression ratio, 8.260158763323982
+##### Compression time, 1.9193100929260254, seconds
+##### gzip, compression ratio, 9.059508472088586
+##### Compression time, 4.238224744796753, seconds
+##### gzip, compression ratio, 9.412838639947553
+##### Compression time, 5.087759494781494, seconds
+##### gzip, compression ratio, 2.412058374329868
+##### Compression time, 1.3337249755859375, seconds
+##### gzip, compression ratio, 2.4120573231433466
+##### Compression time, 1.3526268005371094, seconds
+##### gzip, compression ratio, 9.358121809088901
+##### Compression time, 6.110857248306274, seconds
+##### gzip, compression ratio, 2.4120573231433466
+##### Compression time, 1.347909927368164, seconds
+##### gzip, compression ratio, 2.4111998602435327
+##### Compression time, 1.3856589794158936, seconds
+##### gzip, compression ratio, 2.4111988098051667
+##### Compression time, 1.4040546417236328, seconds
+##### gzip, compression ratio, 2.4111988098051667
+##### Compression time, 1.3924880027770996, seconds
+##### gzip, compression ratio, 2.4993999556091335
+##### Compression time, 1.4969604015350342, seconds
+##### gzip, compression ratio, 2.499398826916568
+##### Compression time, 1.484194040298462, seconds
+##### gzip, compression ratio, 2.499398826916568
+##### Compression time, 1.515693187713623, seconds
+##### gzip, compression ratio, 2.476828460983353
+##### Compression time, 1.352654218673706, seconds
+##### gzip, compression ratio, 2.4768272977027963
+##### Compression time, 1.3590874671936035, seconds
+##### gzip, compression ratio, 2.4768272977027963
+##### Compression time, 1.3369417190551758, seconds
+##### gzip, compression ratio, 1.6197027391770142
+##### Compression time, 0.2872276306152344, seconds
+##### gzip, compression ratio, 8.127011441044182
+##### Compression time, 0.23384356498718262, seconds
+##### gzip, compression ratio, 3.286509050873932
+##### Compression time, 0.42603516578674316, seconds
+##### gzip, compression ratio, 1.4199427682433925
+##### Compression time, 1.658768892288208, seconds
+##### gzip, compression ratio, 8.336542159222482
+##### Compression time, 2.1428043842315674, seconds
+##### gzip, compression ratio, 7.852888394753527
+##### Compression time, 2.3902816772460938, seconds
+##### gzip, compression ratio, 7.721151210340908
+##### Compression time, 2.41684627532959, seconds
+##### gzip, compression ratio, 7.93841664579772
+##### Compression time, 2.839539051055908, seconds
+##### gzip, compression ratio, 1.5971296745766157
+##### Compression time, 7.973708868026733, seconds
+##### gzip, compression ratio, 2.676545703870388
+##### Compression time, 7.499183654785156, seconds
+##### gzip, compression ratio, 7.891749949397149
+##### Compression time, 2.730344772338867, seconds
+##### gzip, compression ratio, 8.23139957670809
+##### Compression time, 2.497581720352173, seconds
+##### gzip, compression ratio, 8.176626562042001
+##### Compression time, 2.500952959060669, seconds
+##### gzip, compression ratio, 7.947146168233721
+##### Compression time, 2.797356605529785, seconds
+##### gzip, compression ratio, 7.899846068465413
+##### Compression time, 3.10616135597229, seconds
+Final Statistics, group_put bigfiles cost, 20.40618896484375, seconds, valid_file_count: 32, success transfer_count: 0,
+
+real	0m21.007s
+user	1m16.792s
+sys	0m0.236s
+$ du -ch bigfiles/*.gz
+2.4M	bigfiles/0601.tar.gz
+6.7M	bigfiles/0602.tar.gz
+6.8M	bigfiles/0603.tar.gz
+6.8M	bigfiles/0604.tar.gz
+2.4M	bigfiles/0605.tar.gz
+4.4M	bigfiles/0701_2.tar.gz
+4.4M	bigfiles/0701_3.tar.gz
+4.4M	bigfiles/0701.tar.gz
+4.4M	bigfiles/0702_2.tar.gz
+4.4M	bigfiles/0702_3.tar.gz
+4.4M	bigfiles/0702.tar.gz
+4.3M	bigfiles/0703_2.tar.gz
+4.3M	bigfiles/0703_3.tar.gz
+4.3M	bigfiles/0703.tar.gz
+4.1M	bigfiles/0704_2.tar.gz
+4.1M	bigfiles/0704_3.tar.gz
+4.1M	bigfiles/0704.tar.gz
+29M	bigfiles/1101_apollo16_earth_northamerica.tiff.gz
+26M	bigfiles/1102_apollo17_earth.tiff.gz
+5.4M	bigfiles/1103_clem_lake_victoria.tiff.gz
+2.0M	bigfiles/1104_gal_moon_nims_41476.tiff.gz
+4.6M	bigfiles/1105_hst_jupiter_aurorae.tiff.gz
+3.7M	bigfiles/1106_jupiter_family.tiff.gz
+2.3M	bigfiles/1201.tar.gz
+2.7M	bigfiles/1202.tar.gz
+2.8M	bigfiles/1203.tar.gz
+2.7M	bigfiles/1204.tar.gz
+2.7M	bigfiles/1205.tar.gz
+2.6M	bigfiles/1206.tar.gz
+2.6M	bigfiles/1207.tar.gz
+2.8M	bigfiles/1208.tar.gz
+3.2M	bigfiles/1209.tar.gz
+170M	total
+$ rm bigfiles/*.tiff.*
+$ rm bigfiles/*.tar.*
+$ 
+$ 
+$ time python3.7 edge2cloud.py GCE put bigfiles bzip2 0 0 4 4 10 10
+PARAMETERS:  bigfiles bzip2
+##### bzip2, compression ratio, 9.365643351328721
+##### Compression time, 1.7088098526000977, seconds
+##### bzip2, compression ratio, 9.365643351328721
+##### Compression time, 1.6858031749725342, seconds
+##### bzip2, compression ratio, 11.00845036159949
+##### Compression time, 4.666329860687256, seconds
+##### bzip2, compression ratio, 11.6312254994946
+##### Compression time, 5.29704737663269, seconds
+##### bzip2, compression ratio, 11.226175532462188
+##### Compression time, 5.596131801605225, seconds
+##### bzip2, compression ratio, 3.295766051296862
+##### Compression time, 3.6350936889648438, seconds
+##### bzip2, compression ratio, 3.295766051296862
+##### Compression time, 3.7210633754730225, seconds
+##### bzip2, compression ratio, 3.295766051296862
+##### Compression time, 3.6748828887939453, seconds
+##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.7715446949005127, seconds
+##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.6518518924713135, seconds
+##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.6795332431793213, seconds
+##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.577393054962158, seconds
+##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.700637102127075, seconds
+##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.6022205352783203, seconds
+##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.4037911891937256, seconds
+##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.3374693393707275, seconds
+##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.4570000171661377, seconds
+##### bzip2, compression ratio, 2.5042437867978498
+##### Compression time, 0.9496443271636963, seconds
+##### bzip2, compression ratio, 10.024636305965174
+##### Compression time, 0.8959062099456787, seconds
+##### bzip2, compression ratio, 2.0396967609606453
+##### Compression time, 3.182184934616089, seconds
+##### bzip2, compression ratio, 3.773810674871065
+##### Compression time, 1.5494749546051025, seconds
+##### bzip2, compression ratio, 3.6280961110277876
+##### Compression time, 1.384758472442627, seconds
+##### bzip2, compression ratio, 2.437960772090991
+##### Compression time, 3.605921506881714, seconds
+##### bzip2, compression ratio, 10.720824019323134
+##### Compression time, 1.7978065013885498, seconds
+##### bzip2, compression ratio, 10.300779345038652
+##### Compression time, 2.217552661895752, seconds
+##### bzip2, compression ratio, 9.9443958626129
+##### Compression time, 2.24938702583313, seconds
+##### bzip2, compression ratio, 9.843229377615769
+##### Compression time, 2.1588289737701416, seconds
+##### bzip2, compression ratio, 9.849270760112521
+##### Compression time, 2.0971057415008545, seconds
+##### bzip2, compression ratio, 10.546170203314606
+##### Compression time, 2.1678149700164795, seconds
+##### bzip2, compression ratio, 10.215455130078924
+##### Compression time, 2.159688949584961, seconds
+##### bzip2, compression ratio, 9.87525262235709
+##### Compression time, 2.0795512199401855, seconds
+##### bzip2, compression ratio, 10.027338017551061
+##### Compression time, 2.464134931564331, seconds
+Final Statistics, group_put bigfiles cost, 23.8276469707489, seconds, valid_file_count: 32, success transfer_count: 0,
+
+real	0m24.549s
+user	1m31.480s
+sys	0m0.288s
+$ du -ch bigfiles/*.bz2
+2.2M	bigfiles/0601.tar.bz2
+5.6M	bigfiles/0602.tar.bz2
+5.5M	bigfiles/0603.tar.bz2
+5.6M	bigfiles/0604.tar.bz2
+2.2M	bigfiles/0605.tar.bz2
+3.3M	bigfiles/0701_2.tar.bz2
+3.3M	bigfiles/0701_3.tar.bz2
+3.3M	bigfiles/0701.tar.bz2
+3.3M	bigfiles/0702_2.tar.bz2
+3.3M	bigfiles/0702_3.tar.bz2
+3.3M	bigfiles/0702.tar.bz2
+3.1M	bigfiles/0703_2.tar.bz2
+3.1M	bigfiles/0703_3.tar.bz2
+3.1M	bigfiles/0703.tar.bz2
+3.0M	bigfiles/0704_2.tar.bz2
+3.0M	bigfiles/0704_3.tar.bz2
+3.0M	bigfiles/0704.tar.bz2
+20M	bigfiles/1101_apollo16_earth_northamerica.tiff.bz2
+17M	bigfiles/1102_apollo17_earth.tiff.bz2
+3.5M	bigfiles/1103_clem_lake_victoria.tiff.bz2
+1.6M	bigfiles/1104_gal_moon_nims_41476.tiff.bz2
+4.0M	bigfiles/1105_hst_jupiter_aurorae.tiff.bz2
+2.8M	bigfiles/1106_jupiter_family.tiff.bz2
+1.8M	bigfiles/1201.tar.bz2
+2.1M	bigfiles/1202.tar.bz2
+2.2M	bigfiles/1203.tar.bz2
+2.2M	bigfiles/1204.tar.bz2
+2.2M	bigfiles/1205.tar.bz2
+2.0M	bigfiles/1206.tar.bz2
+2.1M	bigfiles/1207.tar.bz2
+2.2M	bigfiles/1208.tar.bz2
+2.5M	bigfiles/1209.tar.bz2
+126M	total
+$ rm bigfiles/*.tar.*
+$ rm bigfiles/*.tiff.*
+$ 
+$ 
+$ time python3.7 edge2cloud.py GCE put bigfiles lzma 0 0 4 4 10 10
+PARAMETERS:  bigfiles lzma
+##### lzma, compression ratio, 16.269094992951413
+##### Compression time, 16.59158945083618, seconds
+##### lzma, compression ratio, 16.269094992951413
+##### Compression time, 16.752113580703735, seconds
+##### lzma, compression ratio, 3.1106628632416546
+##### Compression time, 6.496096134185791, seconds
+##### lzma, compression ratio, 3.1106628632416546
+##### Compression time, 6.5331268310546875, seconds
+##### lzma, compression ratio, 3.1106628632416546
+##### Compression time, 6.535757780075073, seconds
+##### lzma, compression ratio, 22.346683907455468
+##### Compression time, 56.68558955192566, seconds
+##### lzma, compression ratio, 21.805775930183962
+##### Compression time, 57.273179054260254, seconds
+##### lzma, compression ratio, 3.1101690534043325
+##### Compression time, 6.62586236000061, seconds
+##### lzma, compression ratio, 24.601505140996753
+##### Compression time, 59.706289529800415, seconds
+##### lzma, compression ratio, 3.1101690534043325
+##### Compression time, 6.755278587341309, seconds
+##### lzma, compression ratio, 3.1101690534043325
+##### Compression time, 6.722830057144165, seconds
+##### lzma, compression ratio, 3.241462837545008
+##### Compression time, 6.7974326610565186, seconds
+##### lzma, compression ratio, 3.241462837545008
+##### Compression time, 6.801251649856567, seconds
+##### lzma, compression ratio, 3.241462837545008
+##### Compression time, 6.792126178741455, seconds
+##### lzma, compression ratio, 3.198255320671551
+##### Compression time, 6.3409624099731445, seconds
+##### lzma, compression ratio, 3.198255320671551
+##### Compression time, 6.295908451080322, seconds
+##### lzma, compression ratio, 3.198255320671551
+##### Compression time, 6.264686107635498, seconds
+##### lzma, compression ratio, 14.18602982548916
+##### Compression time, 1.9607770442962646, seconds
+##### lzma, compression ratio, 2.5722333810808
+##### Compression time, 4.2348504066467285, seconds
+##### lzma, compression ratio, 3.9816166775565955
+##### Compression time, 3.5623183250427246, seconds
+##### lzma, compression ratio, 3.4668457172354743
+##### Compression time, 10.658455848693848, seconds
+##### lzma, compression ratio, 1.8316108997455596
+##### Compression time, 17.983855962753296, seconds
+##### lzma, compression ratio, 17.440999549352053
+##### Compression time, 15.59970474243164, seconds
+##### lzma, compression ratio, 16.545225213955863
+##### Compression time, 17.14842200279236, seconds
+##### lzma, compression ratio, 16.755720171154007
+##### Compression time, 16.460537910461426, seconds
+##### lzma, compression ratio, 2.087653279133045
+##### Compression time, 35.766661405563354, seconds
+##### lzma, compression ratio, 17.439320562519633
+##### Compression time, 15.142908811569214, seconds
+##### lzma, compression ratio, 17.35187043596568
+##### Compression time, 15.499505519866943, seconds
+##### lzma, compression ratio, 18.048160555014782
+##### Compression time, 15.756631851196289, seconds
+##### lzma, compression ratio, 17.72312006601769
+##### Compression time, 15.368871212005615, seconds
+##### lzma, compression ratio, 17.475626813315053
+##### Compression time, 15.046030282974243, seconds
+##### lzma, compression ratio, 16.124960555380245
+##### Compression time, 17.282208919525146, seconds
+Final Statistics, group_put bigfiles cost, 137.45509004592896, seconds, valid_file_count: 32, success transfer_count: 0,
+
+real	2m18.038s
+user	8m14.192s
+sys	0m3.552s
+$ du -ch bigfiles/*.lzma
+1.3M	bigfiles/0601.tar.lzma
+2.8M	bigfiles/0602.tar.lzma
+2.6M	bigfiles/0603.tar.lzma
+2.9M	bigfiles/0604.tar.lzma
+1.3M	bigfiles/0605.tar.lzma
+3.4M	bigfiles/0701_2.tar.lzma
+3.4M	bigfiles/0701_3.tar.lzma
+3.4M	bigfiles/0701.tar.lzma
+3.4M	bigfiles/0702_2.tar.lzma
+3.4M	bigfiles/0702_3.tar.lzma
+3.4M	bigfiles/0702.tar.lzma
+3.3M	bigfiles/0703_2.tar.lzma
+3.3M	bigfiles/0703_3.tar.lzma
+3.3M	bigfiles/0703.tar.lzma
+3.2M	bigfiles/0704_2.tar.lzma
+3.2M	bigfiles/0704_3.tar.lzma
+3.2M	bigfiles/0704.tar.lzma
+23M	bigfiles/1101_apollo16_earth_northamerica.tiff.lzma
+20M	bigfiles/1102_apollo17_earth.tiff.lzma
+3.4M	bigfiles/1103_clem_lake_victoria.tiff.lzma
+1.2M	bigfiles/1104_gal_moon_nims_41476.tiff.lzma
+3.8M	bigfiles/1105_hst_jupiter_aurorae.tiff.lzma
+2.9M	bigfiles/1106_jupiter_family.tiff.lzma
+1.1M	bigfiles/1201.tar.lzma
+1.3M	bigfiles/1202.tar.lzma
+1.3M	bigfiles/1203.tar.lzma
+1.2M	bigfiles/1204.tar.lzma
+1.3M	bigfiles/1205.tar.lzma
+1.2M	bigfiles/1206.tar.lzma
+1.2M	bigfiles/1207.tar.lzma
+1.3M	bigfiles/1208.tar.lzma
+1.6M	bigfiles/1209.tar.lzma
+114M	total
+$ rm bigfiles/*.tiff.*
+$ rm bigfiles/*.tar.*
+$ 
+$ 
+$ time python3.7 edge2cloud.py GCE put bigfiles zstd 0 0 4 4 10 10
+PARAMETERS:  bigfiles zstd
+bigfiles/0601.tar    :  7.13%   (20715520 => 1477839 bytes, bigfiles/0601.tar.zst) 
+##### zstd, compression ratio, 14.017440330103618
+##### Compression time, 16.335931062698364, seconds
+bigfiles/0605.tar    :  7.13%   (20715520 => 1477839 bytes, bigfiles/0605.tar.zst) 
+##### zstd, compression ratio, 14.017440330103618
+##### Compression time, 16.113632440567017, seconds
+bigfiles/0701.tar    : 36.56%   (11069440 => 4046814 bytes, bigfiles/0701.tar.zst) 
+##### zstd, compression ratio, 2.7353468679311677
+##### Compression time, 5.23783540725708, seconds
+bigfiles/0701_2.tar  : 36.56%   (11069440 => 4046814 bytes, bigfiles/0701_2.tar.zst) 
+##### zstd, compression ratio, 2.7353468679311677
+##### Compression time, 5.154872179031372, seconds
+bigfiles/0701_3.tar  : 36.56%   (11069440 => 4046814 bytes, bigfiles/0701_3.tar.zst) 
+##### zstd, compression ratio, 2.7353468679311677
+##### Compression time, 5.2097649574279785, seconds
+bigfiles/0602.tar    :  5.55%   (65464320 => 3632065 bytes, bigfiles/0602.tar.zst) 
+##### zstd, compression ratio, 18.023994614633825
+##### Compression time, 48.34541940689087, seconds
+bigfiles/0603.tar    :  5.13%   (66406400 => 3405088 bytes, bigfiles/0603.tar.zst) 
+##### zstd, compression ratio, 19.502109783946846
+##### Compression time, 48.66466212272644, seconds
+bigfiles/0604.tar    :  5.93%   (64440320 => 3822842 bytes, bigfiles/0604.tar.zst) 
+##### zstd, compression ratio, 16.856652720672212
+##### Compression time, 53.141664028167725, seconds
+bigfiles/0702.tar    : 36.57%   (11069440 => 4047634 bytes, bigfiles/0702.tar.zst) 
+##### zstd, compression ratio, 2.7347927208833607
+##### Compression time, 5.426193714141846, seconds
+bigfiles/0702_2.tar  : 36.57%   (11069440 => 4047634 bytes, bigfiles/0702_2.tar.zst) 
+##### zstd, compression ratio, 2.7347927208833607
+##### Compression time, 5.579600811004639, seconds
+bigfiles/0702_3.tar  : 36.57%   (11069440 => 4047634 bytes, bigfiles/0702_3.tar.zst) 
+##### zstd, compression ratio, 2.7347927208833607
+##### Compression time, 5.437902927398682, seconds
+bigfiles/0703.tar    : 35.25%   (11069440 => 3901897 bytes, bigfiles/0703.tar.zst) 
+##### zstd, compression ratio, 2.836938032961916
+##### Compression time, 5.474828720092773, seconds
+bigfiles/0703_2.tar  : 35.25%   (11069440 => 3901897 bytes, bigfiles/0703_2.tar.zst) 
+##### zstd, compression ratio, 2.836938032961916
+##### Compression time, 5.4633214473724365, seconds
+bigfiles/0704.tar    : 35.63%   (10547200 => 3758455 bytes, bigfiles/0704.tar.zst) 
+##### zstd, compression ratio, 2.8062594869434383
+##### Compression time, 5.104184150695801, seconds
+bigfiles/0703_3.tar  : 35.25%   (11069440 => 3901897 bytes, bigfiles/0703_3.tar.zst) 
+##### zstd, compression ratio, 2.836938032961916
+##### Compression time, 5.639451503753662, seconds
+bigfiles/0704_2.tar  : 35.63%   (10547200 => 3758455 bytes, bigfiles/0704_2.tar.zst) 
+##### zstd, compression ratio, 2.8062594869434383
+##### Compression time, 5.139054536819458, seconds
+bigfiles/0704_3.tar  : 35.63%   (10547200 => 3758455 bytes, bigfiles/0704_3.tar.zst) 
+##### zstd, compression ratio, 2.8062594869434383
+##### Compression time, 5.12020206451416, seconds
+bigfiles/1104_gal_moon_nims_41476.tiff :  9.05%   (16766114 => 1516622 bytes, bigfiles/1104_gal_moon_nims_41476.tiff.zst) 
+##### zstd, compression ratio, 11.054906232403328
+##### Compression time, 0.7775206565856934, seconds
+bigfiles/1105_hst_jupiter_aurorae.tiff : 27.60%   (15612134 => 4308397 bytes, bigfiles/1105_hst_jupiter_aurorae.tiff.zst) 
+##### zstd, compression ratio, 3.623652602116286
+##### Compression time, 2.303708076477051, seconds
+bigfiles/1103_clem_lake_victoria.tiff : 48.96%   (9000152 => 4406489 bytes, bigfiles/1103_clem_lake_victoria.tiff.zst) 
+##### zstd, compression ratio, 2.0424769016784112
+##### Compression time, 3.429586172103882, seconds
+bigfiles/1101_apollo16_earth_northamerica.tiff : 61.62%   (42411890 => 26135753 bytes, bigfiles/1101_apollo16_earth_northamerica.tiff.zst) 
+##### zstd, compression ratio, 1.6227537044752451
+##### Compression time, 12.59961462020874, seconds
+bigfiles/1106_jupiter_family.tiff : 32.72%   (10329186 => 3379275 bytes, bigfiles/1106_jupiter_family.tiff.zst) 
+##### zstd, compression ratio, 3.056627826974721
+##### Compression time, 7.765098810195923, seconds
+bigfiles/1201.tar    :  8.32%   (20008960 => 1665614 bytes, bigfiles/1201.tar.zst) 
+##### zstd, compression ratio, 12.012963387675656
+##### Compression time, 10.16299819946289, seconds
+bigfiles/1102_apollo17_earth.tiff : 53.60%   (42363986 => 22705293 bytes, bigfiles/1102_apollo17_earth.tiff.zst) 
+##### zstd, compression ratio, 1.8658198332873308
+##### Compression time, 25.29801845550537, seconds
+bigfiles/1202.tar    :  8.12%   (22220800 => 1804328 bytes, bigfiles/1202.tar.zst) 
+##### zstd, compression ratio, 12.315277488350233
+##### Compression time, 13.179889678955078, seconds
+bigfiles/1203.tar    :  7.67%   (21913600 => 1679921 bytes, bigfiles/1203.tar.zst) 
+##### zstd, compression ratio, 13.04442292226837
+##### Compression time, 11.900681734085083, seconds
+bigfiles/1204.tar    :  6.59%   (21872640 => 1441184 bytes, bigfiles/1204.tar.zst) 
+##### zstd, compression ratio, 15.176854586229101
+##### Compression time, 11.889573812484741, seconds
+bigfiles/1205.tar    :  6.65%   (21872640 => 1453893 bytes, bigfiles/1205.tar.zst) 
+##### zstd, compression ratio, 15.044188258695792
+##### Compression time, 11.895082235336304, seconds
+bigfiles/1206.tar    :  6.54%   (21841920 => 1427696 bytes, bigfiles/1206.tar.zst) 
+##### zstd, compression ratio, 15.298719055036926
+##### Compression time, 11.829812288284302, seconds
+bigfiles/1207.tar    :  6.80%   (21841920 => 1484226 bytes, bigfiles/1207.tar.zst) 
+##### zstd, compression ratio, 14.71603381156239
+##### Compression time, 11.38606309890747, seconds
+bigfiles/1208.tar    :  6.64%   (22702080 => 1507593 bytes, bigfiles/1208.tar.zst) 
+##### zstd, compression ratio, 15.058493903858668
+##### Compression time, 11.668273448944092, seconds
+bigfiles/1209.tar    :  7.13%   (26163200 => 1864822 bytes, bigfiles/1209.tar.zst) 
+##### zstd, compression ratio, 14.029864512537927
+##### Compression time, 12.584434032440186, seconds
+Final Statistics, group_put bigfiles cost, 109.34437370300293, seconds, valid_file_count: 32, success transfer_count: 0,
+
+real	1m50.538s
+user	6m35.184s
+sys	0m0.976s
+$ du -ch bigfiles/*.zst
+1.5M	bigfiles/0601.tar.zst
+3.5M	bigfiles/0602.tar.zst
+3.3M	bigfiles/0603.tar.zst
+3.7M	bigfiles/0604.tar.zst
+1.5M	bigfiles/0605.tar.zst
+3.9M	bigfiles/0701_2.tar.zst
+3.9M	bigfiles/0701_3.tar.zst
+3.9M	bigfiles/0701.tar.zst
+3.9M	bigfiles/0702_2.tar.zst
+3.9M	bigfiles/0702_3.tar.zst
+3.9M	bigfiles/0702.tar.zst
+3.8M	bigfiles/0703_2.tar.zst
+3.8M	bigfiles/0703_3.tar.zst
+3.8M	bigfiles/0703.tar.zst
+3.6M	bigfiles/0704_2.tar.zst
+3.6M	bigfiles/0704_3.tar.zst
+3.6M	bigfiles/0704.tar.zst
+25M	bigfiles/1101_apollo16_earth_northamerica.tiff.zst
+22M	bigfiles/1102_apollo17_earth.tiff.zst
+4.3M	bigfiles/1103_clem_lake_victoria.tiff.zst
+1.5M	bigfiles/1104_gal_moon_nims_41476.tiff.zst
+4.2M	bigfiles/1105_hst_jupiter_aurorae.tiff.zst
+3.3M	bigfiles/1106_jupiter_family.tiff.zst
+1.6M	bigfiles/1201.tar.zst
+1.8M	bigfiles/1202.tar.zst
+1.7M	bigfiles/1203.tar.zst
+1.4M	bigfiles/1204.tar.zst
+1.4M	bigfiles/1205.tar.zst
+1.4M	bigfiles/1206.tar.zst
+1.5M	bigfiles/1207.tar.zst
+1.5M	bigfiles/1208.tar.zst
+1.8M	bigfiles/1209.tar.zst
+132M	total
+$ 
+$ 
+$ 
+$ rm bigfiles/*.tiff.*
+$ rm bigfiles/*.tar.*
+$ 
+$ 
+$ time python3.7 edge2cloud.py GCE put bigfiles adaptive 0 0 4 4 10 10
+PARAMETERS:  bigfiles adaptive
+tag:bigfiles/0601.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+tag:bigfiles/0602.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+tag:bigfiles/0603.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+tag:bigfiles/0604.tar
+rm: cannot remove 'samples/0601.tar.sample.*'['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+rm: cannot remove 'samples/0601.tar.sample.*'Best compressor for bigfiles/0601.tar based on sample samples/0601.tar.sample: lzma
+Best compressor for bigfiles/0602.tar based on sample samples/0601.tar.sample: lzma
+Best compressor for bigfiles/0603.tar based on sample samples/0601.tar.sample: lzma
+Best compressor for bigfiles/0604.tar based on sample samples/0601.tar.sample: lzma
+##### lzma, compression ratio, 16.269094992951413
+##### Compression time, 16.591538667678833, seconds
+tag:bigfiles/0605.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+Best compressor for bigfiles/0605.tar based on sample samples/0601.tar.sample: lzma
+##### lzma, compression ratio, 16.269094992951413
+##### Compression time, 16.76046633720398, seconds
+tag:bigfiles/0701.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0701.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.295766051296862
+##### Compression time, 3.5260488986968994, seconds
+tag:bigfiles/0701_2.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0701_2.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.295766051296862
+##### Compression time, 3.5597167015075684, seconds
+tag:bigfiles/0701_3.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0701_3.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.295766051296862
+##### Compression time, 3.5490024089813232, seconds
+tag:bigfiles/0702.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0702.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.547119617462158, seconds
+tag:bigfiles/0702_2.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0702_2.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.5766260623931885, seconds
+tag:bigfiles/0702_3.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0702_3.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.564490556716919, seconds
+tag:bigfiles/0703.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0703.tar based on sample samples/0701.tar.sample: bzip2
+##### lzma, compression ratio, 22.346683907455468
+##### Compression time, 56.687318325042725, seconds
+tag:bigfiles/0703_2.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0703_2.tar based on sample samples/0701.tar.sample: bzip2
+##### lzma, compression ratio, 21.805775930183962
+##### Compression time, 58.046287298202515, seconds
+tag:bigfiles/0703_3.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0703_3.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.5617787837982178, seconds
+tag:bigfiles/0704.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0704.tar based on sample samples/0701.tar.sample: bzip2
+##### lzma, compression ratio, 24.601505140996753
+##### Compression time, 59.91951894760132, seconds
+tag:bigfiles/0704_2.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0704_2.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.6420743465423584, seconds
+tag:bigfiles/0704_3.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+Best compressor for bigfiles/0704_3.tar based on sample samples/0701.tar.sample: bzip2
+##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.6422035694122314, seconds
+tag:bigfiles/1101_apollo16_earth_northamerica.tiff
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+Best compressor for bigfiles/1101_apollo16_earth_northamerica.tiff based on sample samples/Nixon.tif: bzip2
+##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.4217610359191895, seconds
+tag:bigfiles/1102_apollo17_earth.tiff
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+Best compressor for bigfiles/1102_apollo17_earth.tiff based on sample samples/Nixon.tif: bzip2
+##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.4662060737609863, seconds
+tag:bigfiles/1103_clem_lake_victoria.tiff
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+Best compressor for bigfiles/1103_clem_lake_victoria.tiff based on sample samples/Nixon.tif: bzip2
+##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.3834333419799805, seconds
+tag:bigfiles/1104_gal_moon_nims_41476.tiff
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+Best compressor for bigfiles/1104_gal_moon_nims_41476.tiff based on sample samples/Nixon.tif: bzip2
+##### bzip2, compression ratio, 2.5042437867978498
+##### Compression time, 0.9641051292419434, seconds
+tag:bigfiles/1105_hst_jupiter_aurorae.tiff
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+Best compressor for bigfiles/1105_hst_jupiter_aurorae.tiff based on sample samples/Nixon.tif: bzip2
+##### bzip2, compression ratio, 10.024636305965174
+##### Compression time, 0.9009788036346436, seconds
+tag:bigfiles/1106_jupiter_family.tiff
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+Best compressor for bigfiles/1106_jupiter_family.tiff based on sample samples/Nixon.tif: bzip2
+##### bzip2, compression ratio, 2.0396967609606453
+##### Compression time, 3.256345748901367, seconds
+tag:bigfiles/1201.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1201.tar based on sample samples/1201.tar.sample: lzma
+##### bzip2, compression ratio, 2.437960772090991
+##### Compression time, 3.668799638748169, seconds
+tag:bigfiles/1202.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1202.tar based on sample samples/1201.tar.sample: lzma
+##### bzip2, compression ratio, 3.773810674871065
+##### Compression time, 1.5586001873016357, seconds
+tag:bigfiles/1203.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1203.tar based on sample samples/1201.tar.sample: lzma
+##### bzip2, compression ratio, 3.6280961110277876
+##### Compression time, 1.4120450019836426, seconds
+tag:bigfiles/1204.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1204.tar based on sample samples/1201.tar.sample: lzma
+##### lzma, compression ratio, 17.440999549352053
+##### Compression time, 16.006228923797607, seconds
+tag:bigfiles/1205.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1205.tar based on sample samples/1201.tar.sample: lzma
+##### lzma, compression ratio, 17.439320562519633
+##### Compression time, 15.788541555404663, seconds
+tag:bigfiles/1206.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1206.tar based on sample samples/1201.tar.sample: lzma
+##### lzma, compression ratio, 16.755720171154007
+##### Compression time, 16.56848168373108, seconds
+tag:bigfiles/1207.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1207.tar based on sample samples/1201.tar.sample: lzma
+##### lzma, compression ratio, 16.545225213955863
+##### Compression time, 17.389118909835815, seconds
+tag:bigfiles/1208.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1208.tar based on sample samples/1201.tar.sample: lzma
+##### lzma, compression ratio, 17.35187043596568
+##### Compression time, 15.503319263458252, seconds
+tag:bigfiles/1209.tar
+['bigfiles/0601.tar', 'bigfiles/0602.tar', 'bigfiles/0603.tar', 'bigfiles/0604.tar', 'bigfiles/0605.tar']
+['bigfiles/0701.tar', 'bigfiles/0702.tar', 'bigfiles/0703.tar', 'bigfiles/0704.tar', 'bigfiles/0701_2.tar', 'bigfiles/0702_2.tar', 'bigfiles/0703_2.tar', 'bigfiles/0704_2.tar', 'bigfiles/0701_3.tar', 'bigfiles/0702_3.tar', 'bigfiles/0703_3.tar', 'bigfiles/0704_3.tar']
+['bigfiles/1101_apollo16_earth_northamerica.tiff', 'bigfiles/1102_apollo17_earth.tiff', 'bigfiles/1103_clem_lake_victoria.tiff', 'bigfiles/1104_gal_moon_nims_41476.tiff', 'bigfiles/1105_hst_jupiter_aurorae.tiff', 'bigfiles/1106_jupiter_family.tiff']
+['bigfiles/1201.tar', 'bigfiles/1202.tar', 'bigfiles/1203.tar', 'bigfiles/1204.tar', 'bigfiles/1205.tar', 'bigfiles/1206.tar', 'bigfiles/1207.tar', 'bigfiles/1208.tar', 'bigfiles/1209.tar']
+Best compressor for bigfiles/1209.tar based on sample samples/1201.tar.sample: lzma
+##### lzma, compression ratio, 18.048160555014782
+##### Compression time, 15.60195517539978, seconds
+##### lzma, compression ratio, 17.72312006601769
+##### Compression time, 15.336421489715576, seconds
+##### lzma, compression ratio, 17.475626813315053
+##### Compression time, 15.415739059448242, seconds
+##### lzma, compression ratio, 16.124960555380245
+##### Compression time, 17.175970792770386, seconds
+Final Statistics, group_put bigfiles cost, 113.72018432617188, seconds, valid_file_count: 32, success transfer_count: 0,
+
+real	1m54.300s
+user	6m38.764s
+sys	0m2.312s
+$ du -ch bigfiles/
+0601.tar                                   0703_2.tar                                 1106_jupiter_family.tiff
+0601.tar.lzma                              0703_2.tar.bz2                             1106_jupiter_family.tiff.bz2
+0602.tar                                   0703_3.tar                                 1201.tar
+0602.tar.lzma                              0703_3.tar.bz2                             1201.tar.lzma
+0603.tar                                   0703.tar                                   1202.tar
+0603.tar.lzma                              0703.tar.bz2                               1202.tar.lzma
+0604.tar                                   0704_2.tar                                 1203.tar
+0604.tar.lzma                              0704_2.tar.bz2                             1203.tar.lzma
+0605.tar                                   0704_3.tar                                 1204.tar
+0605.tar.lzma                              0704_3.tar.bz2                             1204.tar.lzma
+0701_2.tar                                 0704.tar                                   1205.tar
+0701_2.tar.bz2                             0704.tar.bz2                               1205.tar.lzma
+0701_3.tar                                 1101_apollo16_earth_northamerica.tiff      1206.tar
+0701_3.tar.bz2                             1101_apollo16_earth_northamerica.tiff.bz2  1206.tar.lzma
+0701.tar                                   1102_apollo17_earth.tiff                   1207.tar
+0701.tar.bz2                               1102_apollo17_earth.tiff.bz2               1207.tar.lzma
+0702_2.tar                                 1103_clem_lake_victoria.tiff               1208.tar
+0702_2.tar.bz2                             1103_clem_lake_victoria.tiff.bz2           1208.tar.lzma
+0702_3.tar                                 1104_gal_moon_nims_41476.tiff              1209.tar
+0702_3.tar.bz2                             1104_gal_moon_nims_41476.tiff.bz2          1209.tar.lzma
+0702.tar                                   1105_hst_jupiter_aurorae.tiff              
+0702.tar.bz2                               1105_hst_jupiter_aurorae.tiff.bz2          
+$ du -ch bigfiles/*.lzma
+1.3M	bigfiles/0601.tar.lzma
+2.8M	bigfiles/0602.tar.lzma
+2.6M	bigfiles/0603.tar.lzma
+2.9M	bigfiles/0604.tar.lzma
+1.3M	bigfiles/0605.tar.lzma
+1.1M	bigfiles/1201.tar.lzma
+1.3M	bigfiles/1202.tar.lzma
+1.3M	bigfiles/1203.tar.lzma
+1.2M	bigfiles/1204.tar.lzma
+1.3M	bigfiles/1205.tar.lzma
+1.2M	bigfiles/1206.tar.lzma
+1.2M	bigfiles/1207.tar.lzma
+1.3M	bigfiles/1208.tar.lzma
+1.6M	bigfiles/1209.tar.lzma
+22M	total
+$ du -ch bigfiles/*.bz2
+3.3M	bigfiles/0701_2.tar.bz2
+3.3M	bigfiles/0701_3.tar.bz2
+3.3M	bigfiles/0701.tar.bz2
+3.3M	bigfiles/0702_2.tar.bz2
+3.3M	bigfiles/0702_3.tar.bz2
+3.3M	bigfiles/0702.tar.bz2
+3.1M	bigfiles/0703_2.tar.bz2
+3.1M	bigfiles/0703_3.tar.bz2
+3.1M	bigfiles/0703.tar.bz2
+3.0M	bigfiles/0704_2.tar.bz2
+3.0M	bigfiles/0704_3.tar.bz2
+3.0M	bigfiles/0704.tar.bz2
+20M	bigfiles/1101_apollo16_earth_northamerica.tiff.bz2
+17M	bigfiles/1102_apollo17_earth.tiff.bz2
+3.5M	bigfiles/1103_clem_lake_victoria.tiff.bz2
+1.6M	bigfiles/1104_gal_moon_nims_41476.tiff.bz2
+4.0M	bigfiles/1105_hst_jupiter_aurorae.tiff.bz2
+2.8M	bigfiles/1106_jupiter_family.tiff.bz2
+86M	total
+$ vi edge2cloud.py 
+$ 
+$ 
+$ 
+$ rm bigfiles/*.tar.*
+$ rm bigfiles/*.tiff.*
+$ 
+$ 
+$ 
+$ 
+$ ls bigfiles/
+0601.tar  0605.tar    0702_2.tar  0703_3.tar  0704.tar                               1104_gal_moon_nims_41476.tiff  1202.tar  1206.tar
+0602.tar  0701_2.tar  0702_3.tar  0703.tar    1101_apollo16_earth_northamerica.tiff  1105_hst_jupiter_aurorae.tiff  1203.tar  1207.tar
+0603.tar  0701_3.tar  0702.tar    0704_2.tar  1102_apollo17_earth.tiff               1106_jupiter_family.tiff       1204.tar  1208.tar
+0604.tar  0701.tar    0703_2.tar  0704_3.tar  1103_clem_lake_victoria.tiff           1201.tar                       1205.tar  1209.tar
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ time python3.7 edge2cloud.py GCE put bigfiles random 0 0 4 4 10 10
+PARAMETERS:  bigfiles random
+Random compressor for bigfiles/0601.tar: zstd
+Random compressor for bigfiles/0602.tar: bzip2
+Random compressor for bigfiles/0603.tar: zstd
+Random compressor for bigfiles/0604.tar: lzma
+Read : 7 / 63 MB ==> 4.93%##### bzip2, compression ratio, 11.226175532462188
+##### Compression time, 5.152158260345459, seconds
+Random compressor for bigfiles/0605.tar: lzma
+bigfiles/0601.tar    :  7.13%   (20715520 => 1477839 bytes, bigfiles/0601.tar.zst) 
+##### zstd, compression ratio, 14.017440330103618
+##### Compression time, 16.285820960998535, seconds
+Random compressor for bigfiles/0701.tar: zstd
+bigfiles/0701.tar    : 36.56%   (11069440 => 4046814 bytes, bigfiles/0701.tar.zst) 
+##### zstd, compression ratio, 2.7353468679311677
+##### Compression time, 5.289797067642212, seconds
+Random compressor for bigfiles/0701_2.tar: lzma
+Read : 29 / 63 MB ==> 5.18%##### lzma, compression ratio, 16.269094992951413
+##### Compression time, 17.139978408813477, seconds
+Random compressor for bigfiles/0701_3.tar: lzma
+Read : 36 / 63 MB ==> 5.23%##### lzma, compression ratio, 3.1106628632416546
+##### Compression time, 6.714250087738037, seconds
+Random compressor for bigfiles/0702.tar: gzip
+Read : 38 / 63 MB ==> 5.29%##### lzma, compression ratio, 3.1106628632416546
+##### Compression time, 6.70067572593689, seconds
+Random compressor for bigfiles/0702_2.tar: bzip2
+Read : 39 / 63 MB ==> 5.26%##### gzip, compression ratio, 2.4111998602435327
+##### Compression time, 1.4398484230041504, seconds
+Random compressor for bigfiles/0702_3.tar: bzip2
+Read : 42 / 63 MB ==> 5.40%##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.578077793121338, seconds
+Random compressor for bigfiles/0703.tar: gzip
+Read : 43 / 63 MB ==> 5.42%##### bzip2, compression ratio, 3.285556296269473
+##### Compression time, 3.608421564102173, seconds
+Random compressor for bigfiles/0703_2.tar: bzip2
+Read : 44 / 63 MB ==> 5.43%##### gzip, compression ratio, 2.4993999556091335
+##### Compression time, 1.5691359043121338, seconds
+Random compressor for bigfiles/0703_3.tar: lzma
+Read : 47 / 63 MB ==> 5.37%##### bzip2, compression ratio, 3.4418423587545064
+##### Compression time, 3.6678502559661865, seconds
+Random compressor for bigfiles/0704.tar: gzip
+Read : 49 / 63 MB ==> 5.33%##### gzip, compression ratio, 2.476828460983353
+##### Compression time, 1.395005702972412, seconds
+Random compressor for bigfiles/0704_2.tar: bzip2
+Read : 52 / 63 MB ==> 5.26%##### lzma, compression ratio, 3.241462837545008
+##### Compression time, 6.894642353057861, seconds
+Random compressor for bigfiles/0704_3.tar: bzip2
+Read : 52 / 63 MB ==> 5.24%##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.320922374725342, seconds
+Random compressor for bigfiles/1101_apollo16_earth_northamerica.tiff: bzip2
+Read : 56 / 63 MB ==> 5.22%##### bzip2, compression ratio, 3.411250152415014
+##### Compression time, 3.372441053390503, seconds
+Random compressor for bigfiles/1102_apollo17_earth.tiff: bzip2
+Read : 57 / 63 MB ==> 5.22%##### bzip2, compression ratio, 2.0396967609606453
+##### Compression time, 3.1404898166656494, seconds
+Random compressor for bigfiles/1103_clem_lake_victoria.tiff: lzma
+Read : 60 / 63 MB ==> 5.16%##### bzip2, compression ratio, 2.437960772090991
+##### Compression time, 3.5096044540405273, seconds
+Random compressor for bigfiles/1104_gal_moon_nims_41476.tiff: lzma
+Read : 62 / 63 MB ==> 5.10%##### lzma, compression ratio, 2.5722333810808
+##### Compression time, 4.379629850387573, seconds
+Random compressor for bigfiles/1105_hst_jupiter_aurorae.tiff: gzip
+Read : 63 / 63 MB ==> 5.11%##### gzip, compression ratio, 3.286509050873932
+##### Compression time, 0.4316868782043457, seconds
+Random compressor for bigfiles/1106_jupiter_family.tiff: bzip2
+bigfiles/0603.tar    :  5.13%   (66406400 => 3405088 bytes, bigfiles/0603.tar.zst) 
+##### zstd, compression ratio, 19.502109783946846
+##### Compression time, 49.6800103187561, seconds
+Random compressor for bigfiles/1201.tar: gzip
+##### lzma, compression ratio, 14.18602982548916
+##### Compression time, 1.9449083805084229, seconds
+Random compressor for bigfiles/1202.tar: bzip2
+##### bzip2, compression ratio, 3.6280961110277876
+##### Compression time, 1.3626489639282227, seconds
+Random compressor for bigfiles/1203.tar: lzma
+##### bzip2, compression ratio, 10.300779345038652
+##### Compression time, 1.9394867420196533, seconds
+Random compressor for bigfiles/1204.tar: lzma
+##### gzip, compression ratio, 8.336542159222482
+##### Compression time, 2.1695804595947266, seconds
+Random compressor for bigfiles/1205.tar: bzip2
+##### bzip2, compression ratio, 9.849270760112521
+##### Compression time, 1.8355028629302979, seconds
+Random compressor for bigfiles/1206.tar: zstd
+Read : 12 / 20 MB ==> 6.54%##### lzma, compression ratio, 21.805775930183962
+##### Compression time, 60.41201639175415, seconds
+Random compressor for bigfiles/1207.tar: bzip2
+Read : 15 / 20 MB ==> 6.53%##### bzip2, compression ratio, 10.215455130078924
+##### Compression time, 1.8842406272888184, seconds
+Random compressor for bigfiles/1208.tar: lzma
+bigfiles/1206.tar    :  6.54%   (21841920 => 1427696 bytes, bigfiles/1206.tar.zst) 
+##### zstd, compression ratio, 15.298719055036926
+##### Compression time, 11.92812728881836, seconds
+Random compressor for bigfiles/1209.tar: zstd
+Read : 3 / 24 MB ==> 7.05%##### lzma, compression ratio, 17.439320562519633
+##### Compression time, 15.4596266746521, seconds
+Read : 4 / 24 MB ==> 7.10%##### lzma, compression ratio, 16.755720171154007
+##### Compression time, 16.77201247215271, seconds
+Read : 21 / 24 MB ==> 7.05%##### lzma, compression ratio, 17.475626813315053
+##### Compression time, 14.702282190322876, seconds
+bigfiles/1209.tar    :  7.13%   (26163200 => 1864822 bytes, bigfiles/1209.tar.zst) 
+##### zstd, compression ratio, 14.029864512537927
+##### Compression time, 13.200453042984009, seconds
+Final Statistics, group_put bigfiles cost, 78.81808376312256, seconds, valid_file_count: 32, success transfer_count: 0,
+
+real	1m19.800s
+user	4m42.940s
+sys	0m1.484s
+$ 
+$ 
+$ du -ch bigfiles/*.tar.*
+1.5M	bigfiles/0601.tar.zst
+5.6M	bigfiles/0602.tar.bz2
+3.3M	bigfiles/0603.tar.zst
+2.9M	bigfiles/0604.tar.lzma
+1.3M	bigfiles/0605.tar.lzma
+3.4M	bigfiles/0701_2.tar.lzma
+3.4M	bigfiles/0701_3.tar.lzma
+3.9M	bigfiles/0701.tar.zst
+3.3M	bigfiles/0702_2.tar.bz2
+3.3M	bigfiles/0702_3.tar.bz2
+4.4M	bigfiles/0702.tar.gz
+3.1M	bigfiles/0703_2.tar.bz2
+3.3M	bigfiles/0703_3.tar.lzma
+4.3M	bigfiles/0703.tar.gz
+3.0M	bigfiles/0704_2.tar.bz2
+3.0M	bigfiles/0704_3.tar.bz2
+4.1M	bigfiles/0704.tar.gz
+2.3M	bigfiles/1201.tar.gz
+2.1M	bigfiles/1202.tar.bz2
+1.3M	bigfiles/1203.tar.lzma
+1.2M	bigfiles/1204.tar.lzma
+2.2M	bigfiles/1205.tar.bz2
+1.4M	bigfiles/1206.tar.zst
+2.1M	bigfiles/1207.tar.bz2
+1.3M	bigfiles/1208.tar.lzma
+1.8M	bigfiles/1209.tar.zst
+72M	total
+$ du -ch bigfiles/*.tiff.*
+20M	bigfiles/1101_apollo16_earth_northamerica.tiff.bz2
+17M	bigfiles/1102_apollo17_earth.tiff.bz2
+3.4M	bigfiles/1103_clem_lake_victoria.tiff.lzma
+1.2M	bigfiles/1104_gal_moon_nims_41476.tiff.lzma
+4.6M	bigfiles/1105_hst_jupiter_aurorae.tiff.gz
+2.8M	bigfiles/1106_jupiter_family.tiff.bz2
+49M	total
+
